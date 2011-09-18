@@ -13,7 +13,7 @@
 -(void)setRepeatedBackgroundImage_:(id)image
 {
     NSURL *bgURL = [TiUtils toURL:image proxy:proxy];
-    NSLog(@"[DEBUG] bgURL:%@", [bgURL absoluteString]);
+    NSLog(@"[DEBUG] repeatedBackgroundImage bgURL:%@", [bgURL absoluteString]);
     UIImage *bgImage = [[ImageLoader sharedLoader] loadImmediateImage:bgURL];
     
     self.backgroundColor = [UIColor colorWithPatternImage:bgImage];

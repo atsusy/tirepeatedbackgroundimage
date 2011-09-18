@@ -5,7 +5,25 @@
 
 // open a single window with repeated-backgound image.
 var window = Ti.UI.createWindow({
-	repeatedBackgroundImage:'dgrey023.gif'
+	repeatedBarImage:'dgrey023.gif',
+	repeatedBackgroundImage:'128-128.jpg',
+	title:'Repeated Bar Image'
 });
 
-window.open();
+var label = Ti.UI.createLabel({
+	text:'Repeated Background Image',
+	width:'auto',
+	height:'auto',
+	textAlign:'center',
+	color:'white'
+});
+
+window.add(label);
+
+var tab = Ti.UI.createTab({
+	window:window
+});
+
+var tabGroup = Ti.UI.createTabGroup();
+tabGroup.addTab(tab);
+tabGroup.open();

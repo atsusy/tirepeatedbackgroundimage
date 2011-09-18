@@ -2,38 +2,26 @@
 
 ## Description
 
-TODO: Enter your module description here
+This module extends repeatedBackgroundImage property to your view.
 
 ## Accessing the repeatedbackgroundimage Module
 
-To access this module from JavaScript, you would do the following:
-
-	var repeatedbackgroundimage = require("jp.msmc.repeatedbackgroundimage");
-
-The repeatedbackgroundimage variable is a reference to the Module object.	
+Append <module></module> tag to your tiapp.xml.
 
 ## Reference
 
-TODO: If your module has an API, you should document
-the reference here.
-
-### ___PROJECTNAMEASIDENTIFIER__.function
-
-TODO: This is an example of a module function.
-
-### ___PROJECTNAMEASIDENTIFIER__.property
-
-TODO: This is an example of a module property.
+This module has no property and function.
 
 ## Usage
 
-TODO: Enter your usage example here
+var view = Ti.UI.createView({
+	repeatedBackgroundImage:'hoge.png'
+});
 
 ## Author
 
-TODO: Enter your author name, email and other contact
-details you want to share here. 
+KATAOKA,Atsushi <atsushi.kataoka@msmc.jp>
 
 ## License
 
-TODO: Enter your license/legal information here.
+MIT License

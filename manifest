@@ -14,4 +14,4 @@ name: repeatedbackgroundimage
 moduleid: jp.msmc.repeatedbackgroundimage
 guid: fef4e607-96b9-4e80-8e46-ff67c637b826
 platform: iphone
-minsdk: 1.7.1
+minsdk: 1.6.0
