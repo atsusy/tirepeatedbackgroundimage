@@ -3,7 +3,7 @@
 //  repeatedbackgroundimage
 //
 //  Created by KATAOKA,Atsushi on 11/09/18.
-//  Copyright 2011年 __MyCompanyName__. All rights reserved.
+//  Copyright 2011年 MARSHMALLOW MACHINE. All rights reserved.
 //
 
 #import "TiUIWindowProxy+RepeatedBarImage.h"
@@ -12,6 +12,7 @@
 #define REPEATED_BAR_IMAGE_TAG 9876
 
 @implementation TiUIWindow (TiUIWindow_RepeatedBarImage)
+
 -(void)setRepeatedBarImage_:(id)image
 {	
     ENSURE_UI_THREAD(setRepeatedBarImage, image);
@@ -24,6 +25,7 @@
 @end
 
 @implementation TiUIWindowProxy (TiUIWindowProxy_RepeatedBarImage)
+
 -(void)updateRepeatedBarImage
 {
 	UINavigationBar *ourNB = [[controller navigationController] navigationBar];
@@ -44,12 +46,13 @@
     if(repeatedBarView == nil)
     {
         repeatedBarView = [[UIView alloc] init]; 
-        [repeatedBarView setFrame:barFrame];
         [repeatedBarView setTag:REPEATED_BAR_IMAGE_TAG];
+        [repeatedBarView setAutoresizingMask:UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight];
     }
 
     UIColor *newColor = [UIColor colorWithPatternImage:newImage];
     [repeatedBarView setBackgroundColor:newColor];
+    [repeatedBarView setFrame:barFrame];
     
 	if (![ourNB viewWithTag:REPEATED_BAR_IMAGE_TAG])
 	{
