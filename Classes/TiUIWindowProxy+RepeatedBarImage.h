@@ -8,14 +8,9 @@
 #define USE_TI_UIWINDOW
 
 #import <Foundation/Foundation.h>
-#import "TiUIWindow.h"
 #import "TiUIWindowProxy.h"
 
-@interface TiUIWindow (TiUIWindow_RepeatedBarImage)
--(void)setRepeatedBarImage_:(id)image;
-@end
-
 @interface TiUIWindowProxy (TiUIWindowProxy_RepeatedBarImage)
--(void)setRepeatedBarImage_:(id)image;
+-(void)setRepeatedBarImage:(id)image;
 @end
 

@@ -11,19 +11,6 @@
 
 #define REPEATED_BAR_IMAGE_TAG 9876
 
-@implementation TiUIWindow (TiUIWindow_RepeatedBarImage)
-
--(void)setRepeatedBarImage_:(id)image
-{	
-    ENSURE_UI_THREAD(setRepeatedBarImage, image);
-    
-    NSURL *bgURL = [TiUtils toURL:image proxy:self.proxy];    
-    NSLog(@"[DEBUG] repeatedBarImage bgURL:%@", [bgURL absoluteString]);
-
-    [(id)self.proxy setRepeatedBarImage_:bgURL];
-}
-@end
-
 @implementation TiUIWindowProxy (TiUIWindowProxy_RepeatedBarImage)
 
 -(void)updateRepeatedBarImage
@@ -60,9 +47,12 @@
 	}
 }
 
--(void)setRepeatedBarImage_:(id)value
+-(void)setRepeatedBarImage:(id)value
 {
-	[self replaceValue:[self sanitizeURL:value] 
+    NSURL *bgURL = [TiUtils toURL:value proxy:self];
+    NSLog(@"[DEBUG] [TiUIWindowProxy]repeatedBarImage bgURL:%@", [bgURL absoluteString]);
+    
+    [self replaceValue:[self sanitizeURL:bgURL] 
                 forKey:@"repeatedBarImage" 
           notification:NO];
 	

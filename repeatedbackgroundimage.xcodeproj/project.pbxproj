@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 45;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXAggregateTarget section */
@@ -26,6 +26,8 @@
 		24DD6CFA1134B3F500162E58 /* JpMsmcRepeatedbackgroundimageModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 24DD6CF81134B3F500162E58 /* JpMsmcRepeatedbackgroundimageModule.m */; };
 		24DE9E1111C5FE74003F90F6 /* JpMsmcRepeatedbackgroundimageModuleAssets.h in Headers */ = {isa = PBXBuildFile; fileRef = 24DE9E0F11C5FE74003F90F6 /* JpMsmcRepeatedbackgroundimageModuleAssets.h */; };
 		24DE9E1211C5FE74003F90F6 /* JpMsmcRepeatedbackgroundimageModuleAssets.m in Sources */ = {isa = PBXBuildFile; fileRef = 24DE9E1011C5FE74003F90F6 /* JpMsmcRepeatedbackgroundimageModuleAssets.m */; };
+		3135763714283D54000EFE80 /* TiUIWindow+RepeatedBarImage.h in Headers */ = {isa = PBXBuildFile; fileRef = 3135763314283D54000EFE80 /* TiUIWindow+RepeatedBarImage.h */; };
+		3135763814283D54000EFE80 /* TiUIWindow+RepeatedBarImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 3135763414283D54000EFE80 /* TiUIWindow+RepeatedBarImage.m */; };
 		314289CE13C5594B00E29616 /* TiUIView+RepeatedBackgroundImage.h in Headers */ = {isa = PBXBuildFile; fileRef = 314289CC13C5594B00E29616 /* TiUIView+RepeatedBackgroundImage.h */; };
 		314289CF13C5594B00E29616 /* TiUIView+RepeatedBackgroundImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 314289CD13C5594B00E29616 /* TiUIView+RepeatedBackgroundImage.m */; };
 		314FF0FB1425C23A00A2DA9A /* TiUIWindowProxy+RepeatedBarImage.h in Headers */ = {isa = PBXBuildFile; fileRef = 314FF0F91425C23A00A2DA9A /* TiUIWindowProxy+RepeatedBarImage.h */; };
@@ -50,6 +52,8 @@
 		24DD6D1B1134B66800162E58 /* titanium.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = titanium.xcconfig; sourceTree = "<group>"; };
 		24DE9E0F11C5FE74003F90F6 /* JpMsmcRepeatedbackgroundimageModuleAssets.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JpMsmcRepeatedbackgroundimageModuleAssets.h; path = Classes/JpMsmcRepeatedbackgroundimageModuleAssets.h; sourceTree = "<group>"; };
 		24DE9E1011C5FE74003F90F6 /* JpMsmcRepeatedbackgroundimageModuleAssets.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JpMsmcRepeatedbackgroundimageModuleAssets.m; path = Classes/JpMsmcRepeatedbackgroundimageModuleAssets.m; sourceTree = "<group>"; };
+		3135763314283D54000EFE80 /* TiUIWindow+RepeatedBarImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "TiUIWindow+RepeatedBarImage.h"; path = "Classes/TiUIWindow+RepeatedBarImage.h"; sourceTree = "<group>"; };
+		3135763414283D54000EFE80 /* TiUIWindow+RepeatedBarImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "TiUIWindow+RepeatedBarImage.m"; path = "Classes/TiUIWindow+RepeatedBarImage.m"; sourceTree = "<group>"; };
 		314289CC13C5594B00E29616 /* TiUIView+RepeatedBackgroundImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "TiUIView+RepeatedBackgroundImage.h"; path = "Classes/TiUIView+RepeatedBackgroundImage.h"; sourceTree = "<group>"; };
 		314289CD13C5594B00E29616 /* TiUIView+RepeatedBackgroundImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "TiUIView+RepeatedBackgroundImage.m"; path = "Classes/TiUIView+RepeatedBackgroundImage.m"; sourceTree = "<group>"; };
 		314FF0F91425C23A00A2DA9A /* TiUIWindowProxy+RepeatedBarImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "TiUIWindowProxy+RepeatedBarImage.h"; path = "Classes/TiUIWindowProxy+RepeatedBarImage.h"; sourceTree = "<group>"; };
@@ -101,12 +105,14 @@
 		08FB77AEFE84172EC02AAC07 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				314289CC13C5594B00E29616 /* TiUIView+RepeatedBackgroundImage.h */,
-				314289CD13C5594B00E29616 /* TiUIView+RepeatedBackgroundImage.m */,
 				24DE9E0F11C5FE74003F90F6 /* JpMsmcRepeatedbackgroundimageModuleAssets.h */,
 				24DE9E1011C5FE74003F90F6 /* JpMsmcRepeatedbackgroundimageModuleAssets.m */,
 				24DD6CF71134B3F500162E58 /* JpMsmcRepeatedbackgroundimageModule.h */,
 				24DD6CF81134B3F500162E58 /* JpMsmcRepeatedbackgroundimageModule.m */,
+				314289CC13C5594B00E29616 /* TiUIView+RepeatedBackgroundImage.h */,
+				314289CD13C5594B00E29616 /* TiUIView+RepeatedBackgroundImage.m */,
+				3135763314283D54000EFE80 /* TiUIWindow+RepeatedBarImage.h */,
+				3135763414283D54000EFE80 /* TiUIWindow+RepeatedBarImage.m */,
 				314FF0F91425C23A00A2DA9A /* TiUIWindowProxy+RepeatedBarImage.h */,
 				314FF0FA1425C23A00A2DA9A /* TiUIWindowProxy+RepeatedBarImage.m */,
 			);
@@ -134,6 +140,7 @@
 				24DE9E1111C5FE74003F90F6 /* JpMsmcRepeatedbackgroundimageModuleAssets.h in Headers */,
 				314289CE13C5594B00E29616 /* TiUIView+RepeatedBackgroundImage.h in Headers */,
 				314FF0FB1425C23A00A2DA9A /* TiUIWindowProxy+RepeatedBarImage.h in Headers */,
+				3135763714283D54000EFE80 /* TiUIWindow+RepeatedBarImage.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -162,8 +169,11 @@
 /* Begin PBXProject section */
 		0867D690FE84028FC02AAC07 /* Project object */ = {
 			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0410;
+			};
 			buildConfigurationList = 1DEB922208733DC00010E9CD /* Build configuration list for PBXProject "repeatedbackgroundimage" */;
-			compatibilityVersion = "Xcode 3.1";
+			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 1;
 			knownRegions = (
@@ -208,6 +218,7 @@
 				24DE9E1211C5FE74003F90F6 /* JpMsmcRepeatedbackgroundimageModuleAssets.m in Sources */,
 				314289CF13C5594B00E29616 /* TiUIView+RepeatedBackgroundImage.m in Sources */,
 				314FF0FC1425C23A00A2DA9A /* TiUIWindowProxy+RepeatedBarImage.m in Sources */,
+				3135763814283D54000EFE80 /* TiUIWindow+RepeatedBarImage.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -231,11 +242,11 @@
 				COPY_PHASE_STRIP = NO;
 				DSTROOT = /tmp/JpMsmcRepeatedbackgroundimage.dst;
 				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_ENABLE_FIX_AND_CONTINUE = YES;
 				GCC_MODEL_TUNING = G5;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = JpMsmcRepeatedbackgroundimage_Prefix.pch;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				HEADER_SEARCH_PATHS = (
 					"$(TITANIUM_BASE_SDK)",
 					"$(TITANIUM_BASE_SDK2)",
@@ -257,6 +268,7 @@
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = JpMsmcRepeatedbackgroundimage_Prefix.pch;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				HEADER_SEARCH_PATHS = (
 					"$(TITANIUM_BASE_SDK)",
 					"$(TITANIUM_BASE_SDK2)",
@@ -283,7 +295,6 @@
 					"$(TITANIUM_BASE_SDK)/ASI",
 				);
 				OTHER_LDFLAGS = "";
-				PREBINDING = NO;
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -302,7 +313,6 @@
 					"$(TITANIUM_BASE_SDK)/ASI",
 				);
 				OTHER_LDFLAGS = "";
-				PREBINDING = NO;
 				SDKROOT = iphoneos;
 			};
 			name = Release;
@@ -314,8 +324,9 @@
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				PRODUCT_NAME = "Build & test";
-				SDKROOT = iphoneos4.3;
+				SDKROOT = iphoneos;
 			};
 			name = Debug;
 		};
@@ -325,9 +336,9 @@
 			buildSettings = {
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				PRODUCT_NAME = "Build & test";
-				SDKROOT = iphoneos4.3;
+				SDKROOT = iphoneos;
 				ZERO_LINK = NO;
 			};
 			name = Release;
