@@ -20,6 +20,33 @@
 	UIImage *newImage = [TiUtils toImage:[self valueForUndefinedKey:@"repeatedBarImage"]
                                    proxy:self size:barFrame.size];
 
+    // iOS 5 new UINavigationBar custom background
+    if([ourNB respondsToSelector:@selector(setBackgroundImage:forBarMetrics:)] ) {
+        NSLog(@"[DEBUG]UINavigationBar setBackgroundImage:forBarMetrics: used.");
+        
+        CGRect r;
+        if([TiUtils isRetinaDisplay]){
+            UIGraphicsBeginImageContextWithOptions(ourNB.frame.size, YES, 2.0);
+            if(newImage.scale == 2.0){
+                NSLog(@"[DEBUG] barImage is ready for Retina display.");
+                r = CGRectMake(0.0f, 0.0f, CGImageGetWidth(newImage.CGImage)/2.0, CGImageGetHeight(newImage.CGImage)/2.0);
+            }else{
+                NSLog(@"[DEBUG] barImage is not ready for Retina display.");
+                r = CGRectMake(0.0f, 0.0f, CGImageGetWidth(newImage.CGImage), CGImageGetHeight(newImage.CGImage));
+            }
+        }else{
+            UIGraphicsBeginImageContext(ourNB.frame.size);
+            r = CGRectMake(0.0f, 0.0f, CGImageGetWidth(newImage.CGImage), CGImageGetHeight(newImage.CGImage));
+        }
+        
+        CGContextDrawTiledImage(UIGraphicsGetCurrentContext(), r, newImage.CGImage);
+        [ourNB setBackgroundImage:UIGraphicsGetImageFromCurrentImageContext() 
+                    forBarMetrics:UIBarMetricsDefault];
+
+        UIGraphicsEndImageContext();
+        return;
+    } 
+    
     UIView *repeatedBarView = [ourNB viewWithTag:REPEATED_BAR_IMAGE_TAG];
 	if(newImage == nil)
     {
