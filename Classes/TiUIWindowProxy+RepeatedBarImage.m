@@ -39,6 +39,9 @@
             r = CGRectMake(0.0f, 0.0f, CGImageGetWidth(newImage.CGImage), CGImageGetHeight(newImage.CGImage));
         }
         
+        CGContextTranslateCTM(UIGraphicsGetCurrentContext(), 0.0, ourNB.frame.size.height );
+        CGContextScaleCTM(UIGraphicsGetCurrentContext(),  1.0, -1.0);
+
         CGContextDrawTiledImage(UIGraphicsGetCurrentContext(), r, newImage.CGImage);
         [ourNB setBackgroundImage:UIGraphicsGetImageFromCurrentImageContext() 
                     forBarMetrics:UIBarMetricsDefault];
