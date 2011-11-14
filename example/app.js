@@ -4,9 +4,9 @@
 // to users on how to use it by example.
 
 // window backgoundImage and barImage.
-var window1 = Ti.UI.createWindow({
+var window = Ti.UI.createWindow({
 	repeatedBarImage:'dgrey023.gif',
-	repeatedBackgroundImage:'128-128.jpg',
+	repeatedBackgroundImage:'bg_pattern.png',
 	title:'Repeated Bar Image',
     orientationModes: [
         Ti.UI.LANDSCAPE_LEFT,
@@ -24,34 +24,12 @@ var label = Ti.UI.createLabel({
 	color:'white'
 });
 
-window1.add(label);
-var tab1 = Ti.UI.createTab({
-	window:window1,
+window.add(label);
+var tab = Ti.UI.createTab({
+	window:window,
 	title:'window'
 });
 
-// tableViewRow backgroundImage
-var window2 = Ti.UI.createWindow({
-	title:'Row Background'
-});
-
-var tableView = Ti.UI.createTableView({
-	repeatedBackgroundImage:'dgrey023.gif'
-});
-
-var tableViewRow = Ti.UI.createTableViewRow({
-});
-tableView.setData([tableViewRow]);
-
-window2.add(tableView);
-
-var tab2 = Ti.UI.createTab({
-	window:window2,
-	title:'table'
-});
-
-
 var tabGroup = Ti.UI.createTabGroup();
-tabGroup.addTab(tab1);
-tabGroup.addTab(tab2);
+tabGroup.addTab(tab);
 tabGroup.open();

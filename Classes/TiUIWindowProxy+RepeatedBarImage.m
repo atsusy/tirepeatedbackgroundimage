@@ -90,7 +90,7 @@
 	{
 		[self performSelectorOnMainThread:@selector(updateRepeatedBarImage) 
                                withObject:nil 
-                            waitUntilDone:NO];
+                            waitUntilDone:YES];
 	}
 }
 
