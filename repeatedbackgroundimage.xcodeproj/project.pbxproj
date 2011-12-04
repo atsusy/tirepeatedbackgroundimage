@@ -32,6 +32,10 @@
 		314289CF13C5594B00E29616 /* TiUIView+RepeatedBackgroundImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 314289CD13C5594B00E29616 /* TiUIView+RepeatedBackgroundImage.m */; };
 		314FF0FB1425C23A00A2DA9A /* TiUIWindowProxy+RepeatedBarImage.h in Headers */ = {isa = PBXBuildFile; fileRef = 314FF0F91425C23A00A2DA9A /* TiUIWindowProxy+RepeatedBarImage.h */; };
 		314FF0FC1425C23A00A2DA9A /* TiUIWindowProxy+RepeatedBarImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 314FF0FA1425C23A00A2DA9A /* TiUIWindowProxy+RepeatedBarImage.m */; };
+		31B646C2148AE4930022A0A9 /* SCClassUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 31B646C0148AE4930022A0A9 /* SCClassUtils.h */; };
+		31B646C3148AE4930022A0A9 /* SCClassUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 31B646C1148AE4930022A0A9 /* SCClassUtils.m */; };
+		31B646C6148AE4CD0022A0A9 /* UINavigationBar+BackgroundImage.h in Headers */ = {isa = PBXBuildFile; fileRef = 31B646C4148AE4CD0022A0A9 /* UINavigationBar+BackgroundImage.h */; };
+		31B646C7148AE4CD0022A0A9 /* UINavigationBar+BackgroundImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 31B646C5148AE4CD0022A0A9 /* UINavigationBar+BackgroundImage.m */; };
 		AA747D9F0F9514B9006C5449 /* JpMsmcRepeatedbackgroundimage_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = AA747D9E0F9514B9006C5449 /* JpMsmcRepeatedbackgroundimage_Prefix.pch */; };
 		AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACBBE490F95108600F1A2B1 /* Foundation.framework */; };
 /* End PBXBuildFile section */
@@ -58,6 +62,10 @@
 		314289CD13C5594B00E29616 /* TiUIView+RepeatedBackgroundImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "TiUIView+RepeatedBackgroundImage.m"; path = "Classes/TiUIView+RepeatedBackgroundImage.m"; sourceTree = "<group>"; };
 		314FF0F91425C23A00A2DA9A /* TiUIWindowProxy+RepeatedBarImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "TiUIWindowProxy+RepeatedBarImage.h"; path = "Classes/TiUIWindowProxy+RepeatedBarImage.h"; sourceTree = "<group>"; };
 		314FF0FA1425C23A00A2DA9A /* TiUIWindowProxy+RepeatedBarImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "TiUIWindowProxy+RepeatedBarImage.m"; path = "Classes/TiUIWindowProxy+RepeatedBarImage.m"; sourceTree = "<group>"; };
+		31B646C0148AE4930022A0A9 /* SCClassUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SCClassUtils.h; path = Classes/SCClassUtils.h; sourceTree = "<group>"; };
+		31B646C1148AE4930022A0A9 /* SCClassUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SCClassUtils.m; path = Classes/SCClassUtils.m; sourceTree = "<group>"; };
+		31B646C4148AE4CD0022A0A9 /* UINavigationBar+BackgroundImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UINavigationBar+BackgroundImage.h"; path = "Classes/UINavigationBar+BackgroundImage.h"; sourceTree = "<group>"; };
+		31B646C5148AE4CD0022A0A9 /* UINavigationBar+BackgroundImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UINavigationBar+BackgroundImage.m"; path = "Classes/UINavigationBar+BackgroundImage.m"; sourceTree = "<group>"; };
 		AA747D9E0F9514B9006C5449 /* JpMsmcRepeatedbackgroundimage_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JpMsmcRepeatedbackgroundimage_Prefix.pch; sourceTree = SOURCE_ROOT; };
 		AACBBE490F95108600F1A2B1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D2AAC07E0554694100DB518D /* libJpMsmcRepeatedbackgroundimage.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libJpMsmcRepeatedbackgroundimage.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -115,6 +123,10 @@
 				3135763414283D54000EFE80 /* TiUIWindow+RepeatedBarImage.m */,
 				314FF0F91425C23A00A2DA9A /* TiUIWindowProxy+RepeatedBarImage.h */,
 				314FF0FA1425C23A00A2DA9A /* TiUIWindowProxy+RepeatedBarImage.m */,
+				31B646C4148AE4CD0022A0A9 /* UINavigationBar+BackgroundImage.h */,
+				31B646C5148AE4CD0022A0A9 /* UINavigationBar+BackgroundImage.m */,
+				31B646C0148AE4930022A0A9 /* SCClassUtils.h */,
+				31B646C1148AE4930022A0A9 /* SCClassUtils.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -141,6 +153,8 @@
 				314289CE13C5594B00E29616 /* TiUIView+RepeatedBackgroundImage.h in Headers */,
 				314FF0FB1425C23A00A2DA9A /* TiUIWindowProxy+RepeatedBarImage.h in Headers */,
 				3135763714283D54000EFE80 /* TiUIWindow+RepeatedBarImage.h in Headers */,
+				31B646C2148AE4930022A0A9 /* SCClassUtils.h in Headers */,
+				31B646C6148AE4CD0022A0A9 /* UINavigationBar+BackgroundImage.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -170,7 +184,7 @@
 		0867D690FE84028FC02AAC07 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0410;
+				LastUpgradeCheck = 0420;
 			};
 			buildConfigurationList = 1DEB922208733DC00010E9CD /* Build configuration list for PBXProject "repeatedbackgroundimage" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -219,6 +233,8 @@
 				314289CF13C5594B00E29616 /* TiUIView+RepeatedBackgroundImage.m in Sources */,
 				314FF0FC1425C23A00A2DA9A /* TiUIWindowProxy+RepeatedBarImage.m in Sources */,
 				3135763814283D54000EFE80 /* TiUIWindow+RepeatedBarImage.m in Sources */,
+				31B646C3148AE4930022A0A9 /* SCClassUtils.m in Sources */,
+				31B646C7148AE4CD0022A0A9 /* UINavigationBar+BackgroundImage.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,7 +265,7 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = JpMsmcRepeatedbackgroundimage_Prefix.pch;
-				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				HEADER_SEARCH_PATHS = (
 					"$(TITANIUM_BASE_SDK)",
 					"$(TITANIUM_BASE_SDK2)",
@@ -274,7 +290,7 @@
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = JpMsmcRepeatedbackgroundimage_Prefix.pch;
-				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				HEADER_SEARCH_PATHS = (
 					"$(TITANIUM_BASE_SDK)",
 					"$(TITANIUM_BASE_SDK2)",
@@ -330,7 +346,7 @@
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				PRODUCT_NAME = "Build & test";
 				SDKROOT = iphoneos;
 			};
@@ -342,7 +358,7 @@
 			buildSettings = {
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				PRODUCT_NAME = "Build & test";
 				SDKROOT = iphoneos;
 				ZERO_LINK = NO;

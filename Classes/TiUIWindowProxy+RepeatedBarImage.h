@@ -3,7 +3,7 @@
 //  repeatedbackgroundimage
 //
 //  Created by KATAOKA,Atsushi on 11/09/18.
-//  Copyright 2011年 MARSHMALLOW MACHINE. All rights reserved.
+//  Copyright 2011 MARSHMALLOW MACHINE. All rights reserved.
 //
 #define USE_TI_UIWINDOW
 

@@ -7,6 +7,7 @@
 //
 
 #import "TiUIWindow+RepeatedBarImage.h"
+#import "TiUIWindowProxy+RepeatedBarImage.h"
 
 @implementation TiUIWindow (TiUIWindow_RepeatedBarImage)
 -(void)setRepeatedBarImage_:(id)image
@@ -14,6 +15,6 @@
     NSURL *bgURL = [TiUtils toURL:image proxy:self.proxy];    
     NSLog(@"[DEBUG] repeatedBarImage bgURL:%@", [bgURL absoluteString]);
     
-    [self.proxy setRepeatedBarImage:bgURL];
+    [(id)self.proxy setRepeatedBarImage:bgURL];
 }
 @end

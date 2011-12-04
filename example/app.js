@@ -16,6 +16,11 @@ var window = Ti.UI.createWindow({
     ]
 });
 
+var rightNavButton = Ti.UI.createButton({
+    title:'TEST'
+});
+window.rightNavButton = rightNavButton;
+
 var label = Ti.UI.createLabel({
 	text:'Repeated Background Image',
 	width:'auto',
@@ -23,8 +28,8 @@ var label = Ti.UI.createLabel({
 	textAlign:'center',
 	color:'white'
 });
-
 window.add(label);
+
 var tab = Ti.UI.createTab({
 	window:window,
 	title:'window'
@@ -33,3 +38,19 @@ var tab = Ti.UI.createTab({
 var tabGroup = Ti.UI.createTabGroup();
 tabGroup.addTab(tab);
 tabGroup.open();
+
+rightNavButton.addEventListener('click', function(){
+    if(window.repeatedBarImage){
+        window.repeatedBarImage = null;
+    }else{
+        window.repeatedBarImage = 'dgrey023.gif';
+    }
+});
+
+label.addEventListener('click', function(e){
+    var testWindow = Titanium.UI.createWindow({
+        title:"Test Window"
+    });
+    tab.open(testWindow,{animated:true});
+});
+

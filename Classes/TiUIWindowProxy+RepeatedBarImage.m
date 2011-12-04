@@ -3,15 +3,19 @@
 //  repeatedbackgroundimage
 //
 //  Created by KATAOKA,Atsushi on 11/09/18.
-//  Copyright 2011年 MARSHMALLOW MACHINE. All rights reserved.
+//  Copyright 2011 MARSHMALLOW MACHINE. All rights reserved.
 //
 
 #import "TiUIWindowProxy+RepeatedBarImage.h"
+#import "UINavigationBar+BackgroundImage.h"
 #import "ImageLoader.h"
+#import "SCClassUtils.h"
 
-#define REPEATED_BAR_IMAGE_TAG 9876
+#define REPEATED_BAR_IMAGE_TAG kSCNavigationBarBackgroundImageTag
 
 @implementation TiUIWindowProxy (TiUIWindowProxy_RepeatedBarImage)
+
+static BOOL methodSwizzled = NO;
 
 -(void)updateRepeatedBarImage
 {
@@ -20,9 +24,32 @@
 	UIImage *newImage = [TiUtils toImage:[self valueForUndefinedKey:@"repeatedBarImage"]
                                    proxy:self size:barFrame.size];
 
+    if(!methodSwizzled)
+    {
+        [SCClassUtils swizzleSelector:@selector(insertSubview:atIndex:)
+                              ofClass:[UINavigationBar class]
+                         withSelector:@selector(scInsertSubview:atIndex:)];
+        [SCClassUtils swizzleSelector:@selector(sendSubviewToBack:)
+                              ofClass:[UINavigationBar class]
+                         withSelector:@selector(scSendSubviewToBack:)];
+        methodSwizzled = YES;
+        NSLog(@"[DEBUG] method swizzled.");
+    }
+    else
+    {
+        NSLog(@"[DEBUG] method is already swizzled.");
+    }
+    
+#if __IPHONE_OS_VERSION_MIN_REQUIRED > __IPHONE_4_3
     // iOS 5 new UINavigationBar custom background
     if([ourNB respondsToSelector:@selector(setBackgroundImage:forBarMetrics:)] ) {
         NSLog(@"[DEBUG]UINavigationBar setBackgroundImage:forBarMetrics: used.");
+        
+        if(newImage == nil)
+        {
+            [ourNB setBackgroundImage:nil forBarMetrics:UIBarMetricsDefault];
+            return;
+        }
         
         CGRect r;
         if([TiUtils isRetinaDisplay]){
@@ -49,32 +76,29 @@
         UIGraphicsEndImageContext();
         return;
     } 
+#endif
     
     UIView *repeatedBarView = [ourNB viewWithTag:REPEATED_BAR_IMAGE_TAG];
 	if(newImage == nil)
     {
-        if(repeatedBarView){
+        if(repeatedBarView)
+        {
             [repeatedBarView removeFromSuperview];
-            RELEASE_TO_NIL(repeatedBarView);
-            return;
         }
     }
-    
-    if(repeatedBarView == nil)
+    else if(repeatedBarView == nil)
     {
         repeatedBarView = [[UIView alloc] init]; 
-        [repeatedBarView setTag:REPEATED_BAR_IMAGE_TAG];
-        [repeatedBarView setAutoresizingMask:UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight];
-    }
 
-    UIColor *newColor = [UIColor colorWithPatternImage:newImage];
-    [repeatedBarView setBackgroundColor:newColor];
-    [repeatedBarView setFrame:barFrame];
-    
-	if (![ourNB viewWithTag:REPEATED_BAR_IMAGE_TAG])
-	{
-		[ourNB insertSubview:repeatedBarView atIndex:0];
-	}
+        [repeatedBarView setTag:REPEATED_BAR_IMAGE_TAG];
+        [repeatedBarView setUserInteractionEnabled:NO];
+        [repeatedBarView setAutoresizingMask:UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight];
+        [repeatedBarView setBackgroundColor:[UIColor colorWithPatternImage:newImage]];
+        [repeatedBarView setFrame:barFrame];
+        
+        [ourNB insertSubview:repeatedBarView atIndex:0];
+        [repeatedBarView release];
+    }
 }
 
 -(void)setRepeatedBarImage:(id)value
